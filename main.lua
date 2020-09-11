@@ -77,15 +77,15 @@ local function GetIndex(Char)
     end
 end
 
-local function ConvertInto(num)
+local function ConvertInto(Num)
     local res = ""
     local rem = 1;
-    while num >= 0 and rem >= 0 do 
-        rem = num%69
-        num = (num - rem)/69
+    while Num >= 0 and rem >= 0 do 
+        rem = Num%69
+        Num = (Num - rem)/69
         res = DenotionArray[rem+1] .. res
-        if num == 0 then
-            num = -1
+        if Num == 0 then
+            Num = -1
         end
     end
     return res
